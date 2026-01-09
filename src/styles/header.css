@@ -1,0 +1,90 @@
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  transition: transform 0.4s ease, opacity 1s ease;
+  z-index: 999;
+}
+
+.nav-bar.hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.container:hover .outline .rect {
+  transition: 999999s;
+  /* Must specify these values here as something *different* just so that the transition works properly */
+  stroke-dashoffset: 1;
+  stroke-dasharray: 0;
+}
+
+.nav-bar.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+.nav-btn {
+  font-family:'Courier New', Courier, monospace;  
+  padding: 0.5em 1.5em;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.nav-btn:hover {
+  background: #7364c8;
+  border-radius: 10px;
+}
+
+.nav-btn:nth-child(1):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 1.5 8 79.1 8 10.7;
+}
+
+.nav-btn:nth-child(2):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 10.5 9.5 58 9.5 31.6;
+}
+
+.nav-btn:nth-child(3):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 21 8.5 39.2 8.5 55.5;
+}
+
+.nav-btn:nth-child(4):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 31.1 6.9 22.1 6.9 76;
+}
+
+.nav-btn:nth-child(5):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 39.8 6.9 4.65 6.9 76;
+}
+
+.nav-btn:hover ~ .outline .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 0 10 40 10 40;
+  transition: 0.5s !important;
+}
+.container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 62px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5em;
+}
+.menu-btn {
+  font-family:'Courier New', Courier, monospace;  
+  padding: 0.5em 1.5em;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.menu-btn:nth-child(1):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 100 1.5 8 79.1 8 10.7;
+}

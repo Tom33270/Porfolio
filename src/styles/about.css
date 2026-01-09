@@ -1,0 +1,122 @@
+.about {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* évite les débordements du blur */
+}
+.navigation {
+  position: relative;
+  width: 90px;
+  height: 60px;
+  border-radius: 40px;
+
+}
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/src/assets/dark wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  transform: scale(1.1); /* évite les bords visibles du blur */
+  z-index: -1; /* passe derrière le contenu */
+}
+
+
+
+.menu-btn:nth-child(1):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 100 1.5 8 79.1 8 10.7;
+}
+
+
+
+.info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 1.1em;
+  margin: 1em;
+}
+
+
+.img-main{
+    margin: 10px;
+    width: 380px;
+    height: 250px;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 0 15px 45px rgb(255, 255, 255);
+}
+.img-text{
+    width:120px;
+    height: 120px;
+    border-radius: 20px;
+    border: 1px solid white;
+    float: right;
+    margin: 10px;
+}
+
+.img-text2{
+    width:120px;
+    height: 120px;
+    border-radius: 20px;
+    border: 1px solid white;
+    float: left;
+    margin: 10px;
+}
+.img-text3{
+    width:180px;
+    height: 180px;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin: 10px;
+    box-shadow: 0 7px 25px rgb(255, 255, 255);
+    animation: pulseShadow 5s infinite ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes pulseShadow {
+    0% {
+        box-shadow: 0 7px 25px rgb(255, 255, 255);
+    }
+    50% {
+        box-shadow: 0 7px 27px rgb(121, 121, 121);
+    }
+    100% {
+        box-shadow: 0 7px 30px rgb(255, 255, 255);
+    }
+
+    }
+
+
+
+.main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.title{
+  
+  padding-top: 10px;
+  color:white;
+  font-size: 25px; 
+  align-items: center;
+  justify-content: center;
+   
+}
+.sub-title{
+  margin-top:20px;
+  color:white;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 300px;
+  font-size: 20px;
+
+}

@@ -1,0 +1,327 @@
+ .home{
+ 
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url('/src/assets/dark wallpaper.jpg');
+}
+/*
+.header{
+  background-color: red;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  
+}
+.menu{
+  background-color: rgb(144, 144, 231);
+  width: 800px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+
+.outline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.rect {
+  stroke-dashoffset: 5;
+  stroke-dasharray: 0 0 10 40 10 40;
+  transition: 0.5s;
+  stroke: #7364c8;
+}
+
+.nav {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  border-radius: 40px;
+}
+
+.container:hover .outline .rect {
+  transition: 999999s;
+  /* Must specify these values here as something *different* just so that the transition works properly */
+  stroke-dashoffset: 1;
+  stroke-dasharray: 0;
+}
+
+.container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.btn {
+  font-family:'Courier New', Courier, monospace;  
+  padding: 0.5em 1.5em;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.btn:hover {
+  background: #7364c8;
+  border-radius: 10px;
+}
+
+.btn:nth-child(1):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 1.5 8 79.1 8 10.7;
+}
+
+.btn:nth-child(2):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 10.5 9.5 58 9.5 31.6;
+}
+
+.btn:nth-child(3):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 21 8.5 39.2 8.5 55.5;
+}
+
+.btn:nth-child(4):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 31.1 6.9 22.1 6.9 76;
+}
+
+.btn:nth-child(5):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 39.8 6.9 4.65 6.9 76;
+}
+
+.btn:hover ~ .outline .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 0 10 40 10 40;
+  transition: 0.5s !important;
+}
+
+.main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title{
+  
+  padding-top: 150px;
+  color:white;
+  font-size: 25px; 
+   
+}
+.sub-title{
+  margin-top:20px;
+  color:white;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 300px;
+
+}
+.description{
+  color:white;
+  margin-top:20px;
+  font-family:'Courier New', Courier, monospace;
+}
+.description-footer{
+   color:white;
+   font-family:'Courier New', Courier, monospace;
+}
+
+.buttons{
+  margin: 30px;
+  display: flex;
+}
+.btn-details{
+  
+   width: 150px;
+  height: 45px;
+  margin: 20px;
+  border-radius: 6px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #fff;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.btn-details:hover{
+    color: white;
+  border: 1px solid white;
+  background-color: rgb(22, 21, 21);
+}
+
+.footer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+
+.card {
+  margin-top: 20px;
+  width: 25em;
+  height: 30.5em;
+  border:1px solid white;
+  background: #000000;
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1.2em;
+}
+
+.card .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.9em;
+  
+  margin: 1em;
+}
+
+
+.card .img {
+  width: 4.8em;
+  height: 4.8em;
+  background: white;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.card .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card a {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.card a:hover {
+  color: #7364c8;
+}
+
+.card button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: .4s ease-in-out;
+}
+
+.card button:hover {
+  background: rgb(0, 0, 0);
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+} 
+
+.img-content{
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  border: 1px solid white;
+  object-fit: cover;
+}
+
+
+.loader-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  user-select: none;
+ 
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+ 
+}
+
+
+.letter-wrapper {
+  display: flex;
+  gap: 1px;
+}
+.loader-letter {
+  display: inline-block;
+  opacity: 0.4;
+  transform: translateY(0);
+  animation: loader-letter-anim 3.6s infinite;
+  z-index: 1;
+  border-radius: 50px;
+  border: none;
+}
+
+
+
+
+@keyframes loader-letter-anim {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  40% {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+}
+
+.react-logo {
+  position:absolute;
+  color:#61DAFB;
+  animation: spin 3s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
