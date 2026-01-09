@@ -1,0 +1,187 @@
+.contact {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/src/assets/dark wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+.contact-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.contact-title {
+  padding-top: 30px;
+  color: white;
+  font-size: 35px;
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.contact-subtitle {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact-form-container {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid white;
+  box-shadow: 0 15px 45px rgba(255, 255, 255, 0.1);
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-label .required {
+  color: #7364c8;
+  margin-left: 4px;
+}
+
+.form-input,
+.form-textarea {
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #7364c8;
+  background: rgba(115, 100, 200, 0.1);
+  box-shadow: 0 0 15px rgba(115, 100, 200, 0.3);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-error {
+  color: #ff6b6b;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  margin-top: -15px;
+}
+
+.submit-btn {
+  padding: 15px 40px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #7364c8;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(115, 100, 200, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.success-message {
+  color: #51cf66;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 15px;
+  background: rgba(81, 207, 102, 0.1);
+  border: 1px solid #51cf66;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid #ff6b6b;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.back-btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
