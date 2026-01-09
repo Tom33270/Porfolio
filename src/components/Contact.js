@@ -70,17 +70,17 @@ const Contact = () => {
             // Remplacez ces valeurs par vos identifiants EmailJS
             // Obtenez-les sur https://www.emailjs.com/
             const result = await emailjs.send(
-                'YOUR_SERVICE_ID',  // Remplacez par votre Service ID
-                'YOUR_TEMPLATE_ID', // Remplacez par votre Template ID
+                'service_1k0tl9q',  // Remplacez par votre Service ID
+                'template_qxiz86s', // Remplacez par votre Template ID
                 {
                     from_name: formData.nom,
                     from_company: formData.societe,
                     from_email: formData.email,
                     phone: formData.telephone || 'Non fourni',
                     message: formData.message,
-                    to_email: 'votre-email@example.com' // Remplacez par votre adresse email
+                    to_email: 'fontaine.tom@hotmail.fr' // Remplacez par votre adresse email
                 },
-                'YOUR_PUBLIC_KEY'  // Remplacez par votre Public Key
+                'MiA6Fp8FTK2Zrpe1x'  // Remplacez par votre Public Key
             )
 
             console.log('Email envoyé avec succès:', result.text)
