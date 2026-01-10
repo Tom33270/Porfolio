@@ -6,6 +6,16 @@
   flex-direction: column;
   overflow: hidden;
 }
+.graphic{
+
+ position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+
+}
 .skills::before {
   content: "";
   position: absolute;
@@ -16,4 +26,79 @@
   filter: blur(6px);
   transform: scale(1.1);
   z-index: -1;
+}
+
+.skills text:focus {
+    outline: none;
+}
+
+*:focus {
+  outline: 2px solid transparent; /* ou une couleur qui s'intègre mieux à ton design */
+}
+
+/* Et garder le focus visible pour la navigation clavier */
+*:focus-visible {
+  outline: 2px solid white;
+}
+.value-display {
+  
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.modal{
+  border:1px solid white;
+  border-radius: 20px;
+  margin :20px;
+  color:white;
+  width: 400px;
+  height: 550px;
+}
+.modal-score{
+   margin:30px;
+  font-size: 1.3em;
+  color:#7364c8;
+  font-weight:bolder;
+  text-decoration:underline;
+}
+.modal-subject{
+  margin:30px;
+  color:white;
+  font-size: 1.8em;
+  font-style: oblique;
+  text-decoration:underline;
+}
+
+.modal-description{
+  margin:30px;
+  font-size: 1em;
+  
+}
+
+.onHover {
+  transition: 0.2s ease;
+}
+
+.onHover:hover {
+  font-size: 25px;
+  fill:#7364c8;
+  text-decoration: underline;
+
+}
+.context{
+  width: 100%;
+  height:20vh;
+}
+.context-title{
+  margin-left:20px;
+  color:white;
+  text-decoration: underline;
+  
+}
+.info{
+  color:white
 }
