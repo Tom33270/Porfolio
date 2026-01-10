@@ -13,10 +13,10 @@ export default function Header() {
       const currentScroll = window.scrollY;
 
       if (currentScroll > lastScroll && currentScroll > 100) {
-        // Scroll vers le bas → afficher la nav-bar
+       
         setShowNav(true);
       } else if (currentScroll < lastScroll && currentScroll < 100) {
-        // Scroll vers le haut → cacher la nav-bar
+       
         setShowNav(false);
       }
 
@@ -42,7 +42,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* NAVIGATION PRINCIPALE */}
+     
       <div className={`nav-bar ${showNav ? "visible" : "hidden"}`}>
         <div className="container">
           <div className="nav-btn" onClick={() => navigate("/")}>Home</div>
