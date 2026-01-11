@@ -185,3 +185,107 @@
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
 }
+
+/* Media Queries pour Mobile */
+@media (max-width: 768px) {
+  .contact-main-content {
+    padding: 40px 15px;
+  }
+
+  .contact-title {
+    font-size: 28px;
+    padding-top: 20px;
+  }
+
+  .contact-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+
+  .contact-form-container {
+    max-width: 90%;
+    padding: 30px 25px;
+  }
+
+  .form-label {
+    font-size: 13px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .form-textarea {
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+  .back-btn {
+    padding: 10px 25px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-main-content {
+    padding: 30px 10px;
+  }
+
+  .contact-title {
+    font-size: 24px;
+    padding-top: 15px;
+  }
+
+  .contact-subtitle {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+
+  .contact-form-container {
+    max-width: 95%;
+    padding: 25px 20px;
+    clip-path: polygon(20px 0%, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% 20px);
+  }
+
+  .form-group {
+    gap: 6px;
+  }
+
+  .form-label {
+    font-size: 12px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .form-textarea {
+    min-height: 100px;
+  }
+
+  .submit-btn {
+    padding: 10px 25px;
+    font-size: 13px;
+  }
+
+  .back-btn {
+    padding: 8px 20px;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  .success-message,
+  .error-message {
+    font-size: 12px;
+    padding: 12px;
+  }
+}

@@ -65,22 +65,26 @@ const Skills = () => {
     );
 };
 
-const CustomClick = ({ payload, x, y, textAnchor }) => (
-  <text
-    x={x}
-    y={y}
-    textAnchor={textAnchor}
-    fill="#fff"
-    fontSize={20}
-    style={{ cursor: "pointer"}}
-    onClick={() => setHoveredSubject(payload.value)}
-    className='onHover'
-   
-    
-  >
-    {payload.value}
-  </text>
-);
+const CustomClick = ({ payload, x, y, textAnchor }) => {
+  const isMobile = window.innerWidth <= 480;
+  const isTablet = window.innerWidth <= 768;
+  const fontSize = isMobile ? 10 : isTablet ? 14 : 20;
+
+  return (
+    <text
+      x={x}
+      y={y}
+      textAnchor={textAnchor}
+      fill="#fff"
+      fontSize={fontSize}
+      style={{ cursor: "pointer"}}
+      onClick={() => setHoveredSubject(payload.value)}
+      className='onHover'
+    >
+      {payload.value}
+    </text>
+  );
+};
 
 
 
@@ -94,24 +98,25 @@ const CustomClick = ({ payload, x, y, textAnchor }) => (
             <div className='graphic'>
 
             
-            <ResponsiveContainer width="100%" height={600}>
+            <ResponsiveContainer width="100%" height={window.innerWidth <= 480 ? 400 : window.innerWidth <= 768 ? 500 : 600}>
                 <RadarChart data={data}>
                     <PolarGrid stroke="#ccc" />
-                    <PolarAngleAxis 
-                        dataKey="subject" 
+                    <PolarAngleAxis
+                        dataKey="subject"
                         tick={CustomTick, CustomClick}
+                        style={{ fontSize: window.innerWidth <= 480 ? '10px' : window.innerWidth <= 768 ? '14px' : '20px' }}
                     />
-                    <PolarRadiusAxis 
-                        angle={90} 
+                    <PolarRadiusAxis
+                        angle={90}
                         domain={[0, 100]}
                         tick={false}
                     />
-                    <Radar 
-                        name="Compétences" 
-                        dataKey="value" 
+                    <Radar
+                        name="Compétences"
+                        dataKey="value"
                         dot={<CustomDot />}
-                        stroke="#7364c8" 
-                        fill="#7364c8" 
+                        stroke="#7364c8"
+                        fill="#7364c8"
                         fillOpacity={0.6}
                         strokeWidth={3}
                     />

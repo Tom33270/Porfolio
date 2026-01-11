@@ -102,3 +102,160 @@
 .info{
   color:white
 }
+
+/* Media Queries pour Mobile */
+@media (max-width: 968px) {
+  .graphic {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .modal {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    min-height: 450px;
+    margin: 15px auto;
+  }
+
+  .modal-score {
+    margin: 20px;
+    font-size: 1.1em;
+  }
+
+  .modal-subject {
+    margin: 20px;
+    font-size: 1.5em;
+  }
+
+  .modal-description {
+    margin: 20px;
+    font-size: 0.9em;
+  }
+
+  .value-display {
+    font-size: 18px;
+  }
+
+  .context {
+    height: auto;
+    min-height: 15vh;
+  }
+
+  .context-title {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+   .graphic {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+    width: 100%;
+
+  }
+  .modal {
+    width: 95%;
+    max-width: 320px;
+    height: auto;
+    min-height: 400px;
+    margin: 10px auto;
+  }
+
+  .modal-score {
+    margin: 15px;
+    font-size: 1em;
+  }
+
+  .modal-subject {
+    margin: 15px;
+    font-size: 1.3em;
+  }
+
+  .modal-description {
+    margin: 15px;
+    font-size: 0.85em;
+  }
+
+  .value-display {
+    font-size: 16px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .onHover:hover {
+    font-size: 16px;
+  }
+
+  .context {
+    padding: 10px;
+  }
+
+  .context-title {
+    font-size: 14px;
+  }
+
+  .info {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+   .graphic {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+    width: 100%;
+
+  }
+  .modal {
+    width: 95%;
+    max-width: 280px;
+    height: auto;
+    min-height: 350px;
+    margin: 8px auto;
+    padding: 15px;
+  }
+
+  .modal-score {
+    margin: 12px;
+    font-size: 0.9em;
+  }
+
+  .modal-subject {
+    margin: 12px;
+    font-size: 1.1em;
+  }
+
+  .modal-description {
+    margin: 12px;
+    font-size: 0.8em;
+  }
+
+  .value-display {
+    font-size: 14px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .onHover:hover {
+    font-size: 12px;
+  }
+
+  .context {
+    padding: 10px 5px;
+  }
+
+  .context-title {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  .info {
+    padding: 0 10px;
+    font-size: 0.85em;
+  }
+}
