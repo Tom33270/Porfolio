@@ -34,11 +34,6 @@ const About = () => {
                 </p>
                  
                  
-
-
-
-
-
                 <p className='info' >
                     j’ai choisi de me reconvertir dans le développement web après plusieurs années en tant que technicien audiovisuel. 
                     Ce premier parcours m’a appris la rigueur technique, la gestion d’imprévus,

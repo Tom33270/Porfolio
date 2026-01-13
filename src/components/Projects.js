@@ -1,13 +1,14 @@
 import { useNavigate } from 'react-router-dom';
+import Header from "../components/Header";
 
 const Projects = () => {
      const navigate = useNavigate()
     return (
 
-        <div>
-            <h1>Projets</h1>
-            <button onClick={()=> navigate('/')}>HomePage</button>
-        </div>
+       <div className='projects'>
+            
+            <Header/>
+            </div>
     )
 
 }

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
 import '../styles/contact.css'
+import Header from "../components/Header";
 
 const Contact = () => {
     const navigate = useNavigate()
@@ -102,6 +103,7 @@ const Contact = () => {
 
     return (
         <div className="contact">
+            <Header/>
             <div className="contact-main-content">
                 <h1 className="contact-title">Contactez-moi</h1>
                 <p className="contact-subtitle">

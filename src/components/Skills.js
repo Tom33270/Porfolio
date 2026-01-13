@@ -2,7 +2,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 import '../styles/skills.css';
 import Header from "../components/Header";
 import { useState } from 'react';
-import { style } from 'framer-motion/client';
+
 
 const Skills = () => {
     const data = [
