@@ -1,0 +1,20 @@
+  .projects{
+      background: rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  }
+  .projects::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/src/assets/dark wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  transform: scale(1.1);
+  z-index: -1;
+}

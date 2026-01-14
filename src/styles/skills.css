@@ -1,10 +1,12 @@
  .skills{
+    background: rgba(0, 0, 0, 0.3);
  position: relative;
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  
 }
 .graphic{
 
@@ -13,7 +15,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: row;
-  overflow: hidden;
+  
 
 }
 .skills::before {
@@ -89,19 +91,28 @@
   text-decoration: underline;
 
 }
+
 .context{
+  position: relative; /* Ajouté */
   width: 100%;
-  height:20vh;
+  min-height: 30vh; /* Changé de height: 20vh à min-height: 30vh */
+  padding: 20px; /* Ajouté pour l'espacement */
+  background: transparent; /* Ajouté pour s'assurer qu'il n'y a pas de fond blanc */
 }
+
 .context-title{
-  margin-left:20px;
-  color:white;
+  margin-left: 20px;
+  color: white;
   text-decoration: underline;
-  
+  font-size: 1.5em; /* Ajouté pour une meilleure lisibilité */
 }
+
 .info{
-  color:white
+  color: white;
+  margin: 20px; /* Ajouté pour l'espacement */
+  line-height: 1.6; /* Ajouté pour une meilleure lecture */
 }
+
 
 /* Media Queries pour Mobile */
 @media (max-width: 968px) {

@@ -1,4 +1,5 @@
 .contact {
+    background: rgba(0, 0, 0, 0.3);
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -32,12 +33,12 @@
   color: white;
   font-size: 35px;
   margin-bottom: 20px;
-  font-family: 'Courier New', Courier, monospace;
+ 
 }
 
 .contact-subtitle {
   color: white;
-  font-family: 'Courier New', Courier, monospace;
+  
   font-size: 16px;
   margin-bottom: 40px;
   text-align: center;
@@ -68,7 +69,7 @@
 
 .form-label {
   color: white;
-  font-family: 'Courier New', Courier, monospace;
+ 
   font-size: 14px;
   font-weight: 600;
 }
@@ -85,7 +86,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   color: white;
-  font-family: 'Courier New', Courier, monospace;
+  
   font-size: 14px;
   transition: all 0.3s ease;
 }
@@ -110,7 +111,7 @@
 
 .form-error {
   color: #ff6b6b;
-  font-family: 'Courier New', Courier, monospace;
+
   font-size: 12px;
   margin-top: -5px;
 }
@@ -121,7 +122,7 @@
   color: black;
   border: none;
   border-radius: 8px;
-  font-family: 'Courier New', Courier, monospace;
+  
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -148,7 +149,7 @@
 
 .success-message {
   color: #51cf66;
-  font-family: 'Courier New', Courier, monospace;
+
   text-align: center;
   padding: 15px;
   background: rgba(81, 207, 102, 0.1);
@@ -159,7 +160,7 @@
 
 .error-message {
   color: #ff6b6b;
-  font-family: 'Courier New', Courier, monospace;
+ 
   text-align: center;
   padding: 15px;
   background: rgba(255, 107, 107, 0.1);
@@ -175,7 +176,7 @@
   color: white;
   border: 1px solid white;
   border-radius: 8px;
-  font-family: 'Courier New', Courier, monospace;
+
   font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;

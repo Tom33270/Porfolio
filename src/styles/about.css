@@ -1,4 +1,9 @@
+.general{
+  background: rgba(0, 0, 0, 0.3);
+}
+
 .about {
+  background: rgba(0, 0, 0, 0.0);
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -21,8 +26,8 @@
   background-size: cover;
   background-position: center;
   filter: blur(6px);
-  transform: scale(1.1); /* évite les bords visibles du blur */
-  z-index: -1; /* passe derrière le contenu */
+  transform: scale(1.1);
+  z-index: -1; 
 }
 
 
@@ -82,6 +87,127 @@
     animation: pulseShadow 5s infinite ease-in-out;
     animation-direction: alternate;
 }
+.trust-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.0);
+ 
+  margin: 40px 0;
+  border-radius: 20px;
+}
+
+.trust-title {
+  text-align: center;
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  text-decoration-color: #7364c8;
+}
+
+.trust-subtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.companies-grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.company-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.company-card:hover {
+  transform: translateY(-10px);
+  border-color: #7364c8;
+  box-shadow: 0 10px 30px rgba(115, 100, 200, 0.3);
+}
+
+.company-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.company-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.company-name {
+  color: white;
+  font-size: 1.3em;
+  margin: 15px 0 10px;
+  font-weight: bold;
+}
+
+.company-role {
+  color: #7364c8;
+  font-size: 1em;
+  margin: 10px 0;
+  font-style: italic;
+}
+
+.company-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .trust-title {
+    font-size: 1.8em;
+  }
+  
+  .companies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .company-card {
+    padding: 20px;
+  }
+  
+  .company-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trust-section {
+    padding: 40px 10px;
+  }
+  
+  .companies-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
   
 
@@ -120,7 +246,7 @@
 .sub-title{
   margin-top:20px;
   color:white;
-  font-family:'Courier New', Courier, monospace;
+  
   font-weight: 300px;
   font-size: 20px;
 

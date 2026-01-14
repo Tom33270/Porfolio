@@ -1,20 +1,24 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 1);
+  backdrop-filter: blur(10px);
+}
 .nav-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: #000;
-  transition: transform 0.4s ease, opacity 1s ease;
+  background: rgb(0, 0, 0);
+  transform: translateY(0);
   z-index: 999;
+  overflow: hidden;
 }
 
-.nav-bar.hidden {
-  transform: translateX(-100%);
-  opacity: 0;
-}
+
 .container:hover .outline .rect {
   transition: 999999s;
-  /* Must specify these values here as something *different* just so that the transition works properly */
   stroke-dashoffset: 1;
   stroke-dasharray: 0;
 }
@@ -24,7 +28,7 @@
   opacity: 1;
 }
 .nav-btn {
-  font-family:'Courier New', Courier, monospace;  
+  
   padding: 0.5em 1.5em;
   color: #fff;
   cursor: pointer;
@@ -78,7 +82,7 @@
   padding: 0.5em;
 }
 .menu-btn {
-  font-family:'Courier New', Courier, monospace;  
+  
   padding: 0.5em 1.5em;
   color: #fff;
   cursor: pointer;

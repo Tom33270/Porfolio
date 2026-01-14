@@ -102,8 +102,9 @@ const Contact = () => {
     }
 
     return (
+        <><Header/>
         <div className="contact">
-            <Header/>
+            
             <div className="contact-main-content">
                 <h1 className="contact-title">Contactez-moi</h1>
                 <p className="contact-subtitle">
@@ -212,6 +213,7 @@ const Contact = () => {
                 </button>
             </div>
         </div>
+        </>
     )
 }
 

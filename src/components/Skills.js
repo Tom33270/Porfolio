@@ -68,7 +68,7 @@ const Skills = () => {
 const CustomClick = ({ payload, x, y, textAnchor }) => {
   const isMobile = window.innerWidth <= 480;
   const isTablet = window.innerWidth <= 768;
-  const fontSize = isMobile ? 10 : isTablet ? 14 : 20;
+  const fontSize = isMobile ? 10: isTablet ? 14 : 20;
 
   return (
     <text
@@ -91,9 +91,10 @@ const CustomClick = ({ payload, x, y, textAnchor }) => {
     
 
     return (
+        <>
+        <Header/>
         <div className='skills'>
             
-            <Header/>
 
             <div className='graphic'>
 
@@ -133,12 +134,23 @@ const CustomClick = ({ payload, x, y, textAnchor }) => {
 )}
 </div>
 <div className='context'>
-    <h2 className='context-title'> Contexte du graphique:</h2>
-    <p className='info'>Ce graphique est issu du compte-rendu de ma formation sur le site, il résume  </p>
+    <h2 className='context-title'>Contexte du graphique :</h2>
+    <p className='info'>
+        Ce graphique radar est issu de mon compte-rendu de formation La Capsule (Batch 183, Oct-Déc 2024). 
+        Il synthétise l'ensemble des compétences acquises durant les 10 semaines de formation intensive en développement web et mobile full-stack. 
+        Chaque axe représente un bloc de compétences spécifique évalué tout au long du bootcamp, couvrant l'ensemble du cycle de développement : 
+        de la configuration de l'environnement de travail (setup) aux bases de la programmation JavaScript, 
+        en passant par la gestion de bases de données, le développement frontend avec React et React Native, 
+        le backend avec Node.js et Express, jusqu'aux fonctionnalités avancées comme Redux, TypeScript et les WebSockets. 
+        Les scores (exprimés en pourcentage) reflètent ma maîtrise de chaque domaine à l'issue de la formation, 
+        et sont le résultat d'évaluations continues basées sur des projets pratiques et des exercices techniques. 
+        Cliquez sur un axe pour afficher le détail complet des compétences correspondantes et les critères d'évaluation.
+    </p>
 </div>
 
 
         </div>
+        </>
     );
 }
 
