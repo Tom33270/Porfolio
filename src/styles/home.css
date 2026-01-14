@@ -186,6 +186,8 @@
 
 .card {
   margin-top: 20px;
+  justify-content: center;
+  align-items: center;
   width: 25em;
   height: 30.5em;
   border:1px solid white;
@@ -212,8 +214,7 @@
   color: white;
   display: block;
   text-align: center;
-  font-size: 0.9em;
-  
+  font-size: 0.9em; 
   margin: 1em;
 }
 
