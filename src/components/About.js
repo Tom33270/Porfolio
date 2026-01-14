@@ -83,7 +83,7 @@ const About = () => {
   </p>
   
   <div className='companies-grid'>
-    <div className='company-card'>
+    <div className='company-card' onClick={() => window.open('https://www.firstimpression.com', '_blank')}>
       <div className='company-logo'>
         <img src={firstImpressionLogo} alt="First Impression" />
       </div>
@@ -92,7 +92,7 @@ const About = () => {
       <p className='company-description'>LED walls, systèmes son</p>
     </div>
 
-    <div className='company-card'>
+    <div className='company-card' onClick={() => window.open('https://www.puydufou.com', '_blank')}>
       <div className='company-logo'>
         <img src={puyDuFouLogo} alt="Puy du Fou" />
       </div>
@@ -101,7 +101,7 @@ const About = () => {
       <p className='company-description'>Spectacles et événements</p>
     </div>
 
-    <div className='company-card'>
+    <div className='company-card' onClick={() => window.open('https://www.sanofi.com', '_blank')}>
       <div className='company-logo'>
         <img src={sanofiLogo} alt="Sanofi" />
       </div>
@@ -110,7 +110,7 @@ const About = () => {
       <p className='company-description'>Événements corporate</p>
     </div>
 
-    <div className='company-card'>
+    <div className='company-card' onClick={() => window.open('https://www.allevents.fr', '_blank')}>
       <div className='company-logo'>
         <img src={allEventsLogo} alt="AllEvents" />
       </div>
@@ -119,7 +119,7 @@ const About = () => {
       <p className='company-description'>Événementiel de luxe</p>
     </div>
 
-    <div className='company-card'>
+    <div className='company-card' onClick={() => window.open('https://www.immersion.fr', '_blank')}>
       <div className='company-logo'>
         <img src={immersionLogo} alt="Immersion" />
       </div>
@@ -128,7 +128,7 @@ const About = () => {
       <p className='company-description'>Production audiovisuelle</p>
     </div>
 
-    <div className='company-card'>
+    <div className='company-card' onClick={() => window.open('https://www.paris-saclay.com', '_blank')} >
       <div className='company-logo'>
         <img src={parisSaclayLogo} alt="Communauté Paris-Saclay" />
       </div>
@@ -137,7 +137,7 @@ const About = () => {
       <p className='company-description'>Événements / concerts / théatres</p>
     </div>
 
-    <div className='company-card'>
+    <div className='company-card' onClick={() => window.open('https://www.saclay.fr', '_blank')}>
       <div className='company-logo'>
         <img src={saclayLogo} alt="Mairie de Saclay" />
       </div>
