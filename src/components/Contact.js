@@ -213,9 +213,7 @@ const Contact = () => {
                     )}
                 </div>
 
-                <button className="back-btn" onClick={() => console.log('FR : +336 31 89 58 35')}>
-                    {t.contact.phoneButton}
-                </button>
+            
             </div>
         </div>
         </>

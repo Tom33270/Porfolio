@@ -6,11 +6,30 @@ import { FaReact } from "react-icons/fa";
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 
+
 const Home = () => {
   const navigate = useNavigate()
   const { isFrench, toggleLanguage } = useLanguage();
   const t = translations[isFrench ? 'fr' : 'en'];
   const text = t.home.footer;
+
+  const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/CV.pdf';
+    link.download = 'CV_Tom_Fontaine.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+    const downloadLM= () => {
+    const link = document.createElement('a');
+    link.href = '/Lettre_motivation.pdf';
+    link.download = 'Lettre_de_motivation_Tom_Fontaine.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
 
   return (
@@ -82,8 +101,8 @@ const Home = () => {
 </a>
   </div >
    <div className='buttons'>
-    <button className='btn-details'>{t.home.cv}</button>
-    <button className='btn-details'>{t.home.coverLetter}</button>
+    <button className='btn-details' onClick={() => {downloadCV(); console.log('downloaded')}}>{t.home.cv}</button>
+    <button className='btn-details' onClick={() => {downloadLM(); console.log('downloaded')}}>{t.home.coverLetter}</button>
     </div>
 </div>
        
