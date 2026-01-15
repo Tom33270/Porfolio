@@ -51,7 +51,7 @@ const Projects = () => {
               <span className='tech-tag'>Expo</span>
             </div>
             <div className='project-buttons'>
-              <button className='btn-primary' onClick={() => openWebsite('https://github.com/FelixHls/ParentPalAI-frontend')}>
+              <button className='btn-primary' onClick={() => openWebsite('https://github.com/Tom33270/ParentPalAI-frontend')}>
                 Voir sur GitHub
               </button>
               <button className='btn-secondary' onClick={() => openWebsite('https://expo.dev/preview/update?message=logo&updateRuntimeVersion=1.0.0&createdAt=2025-12-19T14%3A07%3A09.966Z&slug=exp&projectId=c850b847-128f-44cc-bdb8-a21b6f182f17&group=9278f00f-05e0-4047-b31b-547a3d1084f8')}>

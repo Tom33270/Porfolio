@@ -208,8 +208,8 @@ const Contact = () => {
                     )}
                 </div>
 
-                <button className="back-btn" onClick={() => navigate('/')}>
-                    Retour à l'accueil
+                <button className="back-btn" onClick={() => console.log('FR : +336 31 89 58 35')}>
+                    Mon 06?
                 </button>
             </div>
         </div>
