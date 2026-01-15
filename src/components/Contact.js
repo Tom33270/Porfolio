@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
 import '../styles/contact.css'
 import Header from "../components/Header";
@@ -7,7 +6,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 
 const Contact = () => {
-    const navigate = useNavigate()
+    
     const { isFrench } = useLanguage();
     const t = translations[isFrench ? 'fr' : 'en'];
 

@@ -1,6 +1,5 @@
 
 import tom from '../assets/tom pro.jpeg';
-import regie from '../assets/puy du fou.jpeg'
 import '../styles/about.css'
 import Header from "../components/Header";
 import firstImpressionLogo from '../assets/firstimpression logo.jpg';

@@ -35,7 +35,7 @@ const Skills = () => {
   ])
 );
 
-    const [selectedValue, setSelectedValue] = useState(null);
+    const [ setSelectedValue] = useState(null);
     const [hoveredSubject, setHoveredSubject] = useState(null);
     
 
