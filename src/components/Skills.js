@@ -2,23 +2,28 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 import '../styles/skills.css';
 import Header from "../components/Header";
 import { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 
 const Skills = () => {
+    const { isFrench } = useLanguage();
+    const t = translations[isFrench ? 'fr' : 'en'];
+
     const data = [
-        { subject: 'Qualité & opti code', value: 83 , description: "Etre capable d'adopter les bonnes pratiques des développeurs professionnels / Mettre en place les principes du Clean Code"},
-        { subject: 'Gestion projet', value: 100 , description: "Comprendre la méthode SCRUM / Etre capable de définir et organiser un sprint / Savoir chiffrer et prioriser les tâches / Savoir animé et organiser des points de suivi" },
-        { subject: 'Design sprint', value: 100 , description: "Etre capable de définir la problématique et la cible / Savoir elaborer des storyboards / Savoir organiser des tests utilisateurs et réaliser des users journey map / Savoir créer des Wireframes, des Mockups et des UI kits avec Figma" },
-        { subject: 'Intégration continue', value: 84 , description: "Etre capable d'utiliser les branches avec Git / Savoir mettre en place un dépôt distant avec GitHub / Gérer les conflits de code / Etre capable de déployer une application sur un serveur / Maîtriser le concept de TDD (Test Driven Development)" },
-        { subject: 'HTML & CSS', value: 77 , description: "Maîtriser les fondamentaux HTML & CSS / Maîtriser les techniques de positionnement Flexbox / Savoir utiliser le responsive avec les media queries" },
-        { subject: 'Backend & architecture logiciel', value: 76 , description: "Savoir utiliser le Framework Express / Maîtriser l’architecture MVC et le concept de routes / Mettre en place un système d'authentification sécurisé / Maîtriser le concept du CRUD dans les requêtes HTTP / Etre capable de concevoir une architecture en REST" },
-        { subject: 'JavaScript Frontend', value: 84 , description: "Maîtriser les fondamentaux JS frontend et utiliser ES6 / Savoir apporter de l’interactivité via les événements / Savoir dynamiser le HTML via le DOM / Etre capable de communiquer avec un webservice avec la méthode Fetch" },
-        { subject: 'Fonctionnalités avancées', value: 76 , description: "Mettre en place la librairie Redux / Mettre en place la persistance des données avec Redux Persist / Maîtriser les références / Manipuler et mettre en place l’upload de fichiers binaires / Mettre en place une messagerie en temps réel avec les websockets et Pusher / Mettre en place TypeScript" },
-        { subject: 'React web', value: 84 , description: "Etre capable de créer et utiliser les composants et exploiter leur cycle de vie / Maîtriser les concepts de propriété (prop) et d’état (state) / Savoir gérer la navigation avec NextJS / Etre capable d'optimiser le référencement (SEO) d’une application React" },
-        { subject: 'React Native', value: 77 , description: "Savoir installer et maîtriser l’environnement Expo / Savoir intégrer un système de géolocalisation / Etre capable d'exploiter la caméra d’un mobile / Mettre en place la navigation" },
-        { subject: 'Setup', value: 83 , description: "Savoir installer et configurer un IDE / Savoir utiliser le terminal et les commandes de base / Etre capable d'installer l’environnement de NodeJS / Savoir installer Git et utiliser les commande" },
-        { subject: 'Base de données', value: 83 , description: "Savoir concevoir et modéliser une base de données / Maîtriser les concepts de clé étrangère et clé primaire / Maîtriser le potentiel du NoSQL à travers les sous-documents / Etre capable d'exploiter une BDD au travers les opérations CRUD /Manipuler les données avec les requêtes avancées / Etre capable d'exploiter la base de donnée avec un ORM /  Etre capable de mettre en place des procédures conformes aux directives du RGPD et de la CNIL" },
-        { subject: 'Bases programmation', value: 90 , description: "Manipuler les structures JavaScript & les différents types de données  / Maîtriser les expressions régulières / Etre capable de factoriser son code grâce aux fonctions" }
+        { subject: t.skills.subjects['Qualité & opti code'], value: 83 , description: t.skills.descriptions['Qualité & opti code']},
+        { subject: t.skills.subjects['Gestion projet'], value: 100 , description: t.skills.descriptions['Gestion projet'] },
+        { subject: t.skills.subjects['Design sprint'], value: 100 , description: t.skills.descriptions['Design sprint'] },
+        { subject: t.skills.subjects['Intégration continue'], value: 84 , description: t.skills.descriptions['Intégration continue'] },
+        { subject: t.skills.subjects['HTML & CSS'], value: 77 , description: t.skills.descriptions['HTML & CSS'] },
+        { subject: t.skills.subjects['Backend & architecture logiciel'], value: 76 , description: t.skills.descriptions['Backend & architecture logiciel'] },
+        { subject: t.skills.subjects['JavaScript Frontend'], value: 84 , description: t.skills.descriptions['JavaScript Frontend'] },
+        { subject: t.skills.subjects['Fonctionnalités avancées'], value: 76 , description: t.skills.descriptions['Fonctionnalités avancées'] },
+        { subject: t.skills.subjects['React web'], value: 84 , description: t.skills.descriptions['React web'] },
+        { subject: t.skills.subjects['React Native'], value: 77 , description: t.skills.descriptions['React Native'] },
+        { subject: t.skills.subjects['Setup'], value: 83 , description: t.skills.descriptions['Setup'] },
+        { subject: t.skills.subjects['Base de données'], value: 83 , description: t.skills.descriptions['Base de données'] },
+        { subject: t.skills.subjects['Bases programmation'], value: 90 , description: t.skills.descriptions['Bases programmation'] }
     ];
     const descriptions = Object.fromEntries(
   data.map(item => [
@@ -113,7 +118,7 @@ const CustomClick = ({ payload, x, y, textAnchor }) => {
                         tick={false}
                     />
                     <Radar
-                        name="Compétences"
+                        name={t.skills.competencesLabel}
                         dataKey="value"
                         dot={<CustomDot />}
                         stroke="#7364c8"
@@ -127,24 +132,16 @@ const CustomClick = ({ payload, x, y, textAnchor }) => {
             {hoveredSubject && (
   <div className="modal">
     <h3 className='modal-subject'>{hoveredSubject}</h3>
-    <p className='modal-score'> Score:  {descriptions[hoveredSubject].score}%</p>
+    <p className='modal-score'> {t.skills.scoreLabel}  {descriptions[hoveredSubject].score}%</p>
     <p className='modal-description'>{descriptions[hoveredSubject].description}</p>
-    
+
   </div>
 )}
 </div>
 <div className='context'>
-    <h2 className='context-title'>Contexte du graphique :</h2>
+    <h2 className='context-title'>{t.skills.contextTitle}</h2>
     <p className='info'>
-        Ce graphique radar est issu de mon compte-rendu de formation La Capsule (Batch 183, Oct-Déc 2024). 
-        Il synthétise l'ensemble des compétences acquises durant les 10 semaines de formation intensive en développement web et mobile full-stack. 
-        Chaque axe représente un bloc de compétences spécifique évalué tout au long du bootcamp, couvrant l'ensemble du cycle de développement : 
-        de la configuration de l'environnement de travail (setup) aux bases de la programmation JavaScript, 
-        en passant par la gestion de bases de données, le développement frontend avec React et React Native, 
-        le backend avec Node.js et Express, jusqu'aux fonctionnalités avancées comme Redux, TypeScript et les WebSockets. 
-        Les scores (exprimés en pourcentage) reflètent ma maîtrise de chaque domaine à l'issue de la formation, 
-        et sont le résultat d'évaluations continues basées sur des projets pratiques et des exercices techniques. 
-        Cliquez sur un axe pour afficher le détail complet des compétences correspondantes et les critères d'évaluation.
+        {t.skills.contextText}
     </p>
 </div>
 

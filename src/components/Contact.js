@@ -3,9 +3,14 @@ import { useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
 import '../styles/contact.css'
 import Header from "../components/Header";
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Contact = () => {
     const navigate = useNavigate()
+    const { isFrench } = useLanguage();
+    const t = translations[isFrench ? 'fr' : 'en'];
+
     const [formData, setFormData] = useState({
         nom: '',
         societe: '',
@@ -36,21 +41,21 @@ const Contact = () => {
         const newErrors = {}
 
         if (!formData.nom.trim()) {
-            newErrors.nom = 'Le nom est obligatoire'
+            newErrors.nom = t.contact.errors.nameRequired
         }
 
         if (!formData.societe.trim()) {
-            newErrors.societe = 'La société est obligatoire'
+            newErrors.societe = t.contact.errors.companyRequired
         }
 
         if (!formData.email.trim()) {
-            newErrors.email = 'L\'email est obligatoire'
+            newErrors.email = t.contact.errors.emailRequired
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-            newErrors.email = 'Email invalide'
+            newErrors.email = t.contact.errors.emailInvalid
         }
 
         if (!formData.message.trim()) {
-            newErrors.message = 'Le message est obligatoire'
+            newErrors.message = t.contact.errors.messageRequired
         }
 
         setErrors(newErrors)
@@ -104,18 +109,18 @@ const Contact = () => {
     return (
         <><Header/>
         <div className="contact">
-            
+
             <div className="contact-main-content">
-                <h1 className="contact-title">Contactez-moi</h1>
+                <h1 className="contact-title">{t.contact.title}</h1>
                 <p className="contact-subtitle">
-                    Remplissez le formulaire ci-dessous pour me contacter
+                    {t.contact.subtitle}
                 </p>
 
                 <div className="contact-form-container">
                     <form className="contact-form" onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label className="form-label">
-                                Nom <span className="required">*</span>
+                                {t.contact.name} <span className="required">{t.contact.required}</span>
                             </label>
                             <input
                                 type="text"
@@ -123,14 +128,14 @@ const Contact = () => {
                                 value={formData.nom}
                                 onChange={handleChange}
                                 className="form-input"
-                                placeholder="Votre nom complet"
+                                placeholder={t.contact.placeholders.name}
                             />
                             {errors.nom && <span className="form-error">{errors.nom}</span>}
                         </div>
 
                         <div className="form-group">
                             <label className="form-label">
-                                Société <span className="required">*</span>
+                                {t.contact.company} <span className="required">{t.contact.required}</span>
                             </label>
                             <input
                                 type="text"
@@ -138,14 +143,14 @@ const Contact = () => {
                                 value={formData.societe}
                                 onChange={handleChange}
                                 className="form-input"
-                                placeholder="Nom de votre société"
+                                placeholder={t.contact.placeholders.company}
                             />
                             {errors.societe && <span className="form-error">{errors.societe}</span>}
                         </div>
 
                         <div className="form-group">
                             <label className="form-label">
-                                Email <span className="required">*</span>
+                                {t.contact.email} <span className="required">{t.contact.required}</span>
                             </label>
                             <input
                                 type="email"
@@ -153,14 +158,14 @@ const Contact = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 className="form-input"
-                                placeholder="votre.email@example.com"
+                                placeholder={t.contact.placeholders.email}
                             />
                             {errors.email && <span className="form-error">{errors.email}</span>}
                         </div>
 
                         <div className="form-group">
                             <label className="form-label">
-                                Téléphone
+                                {t.contact.phone}
                             </label>
                             <input
                                 type="tel"
@@ -168,20 +173,20 @@ const Contact = () => {
                                 value={formData.telephone}
                                 onChange={handleChange}
                                 className="form-input"
-                                placeholder="+33 6 12 34 56 78"
+                                placeholder={t.contact.placeholders.phone}
                             />
                         </div>
 
                         <div className="form-group">
                             <label className="form-label">
-                                Message <span className="required">*</span>
+                                {t.contact.message} <span className="required">{t.contact.required}</span>
                             </label>
                             <textarea
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
                                 className="form-textarea"
-                                placeholder="Votre message..."
+                                placeholder={t.contact.placeholders.message}
                             />
                             {errors.message && <span className="form-error">{errors.message}</span>}
                         </div>
@@ -191,25 +196,25 @@ const Contact = () => {
                             className="submit-btn"
                             disabled={isSubmitting}
                         >
-                            {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
+                            {isSubmitting ? t.contact.sending : t.contact.send}
                         </button>
                     </form>
 
                     {submitStatus === 'success' && (
                         <div className="success-message">
-                            Message envoyé avec succès ! Je vous répondrai bientôt.
+                            {t.contact.successMessage}
                         </div>
                     )}
 
                     {submitStatus === 'error' && (
                         <div className="error-message">
-                            Erreur lors de l'envoi. Veuillez réessayer.
+                            {t.contact.errorMessage}
                         </div>
                     )}
                 </div>
 
                 <button className="back-btn" onClick={() => console.log('FR : +336 31 89 58 35')}>
-                    Mon 06?
+                    {t.contact.phoneButton}
                 </button>
             </div>
         </div>

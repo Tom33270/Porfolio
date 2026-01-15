@@ -1,20 +1,14 @@
 
 import { useNavigate } from "react-router-dom";
 import '../styles/header.css'
-import { useState } from "react";
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 
 export default function Header() {
   const navigate = useNavigate();
-  const [isFrench, setIsFrench] = useState(true)
-
-  
-    const toggleLang = () => {
-    setIsFrench(prev => !prev);
-  };
-
-  
- 
+  const { isFrench, toggleLanguage } = useLanguage();
+  const t = translations[isFrench ? 'fr' : 'en'];
 
 
   return (
@@ -22,11 +16,11 @@ export default function Header() {
 
 <div class="nav">
   <div class="container">
-    <div className="btn" onClick={()=> navigate('/')}>Accueil</div>
-    <div className="btn" onClick={()=> navigate('/Skills')}>Compétences</div>
-    <div className="btn" onClick={()=> navigate('/Projects')}>Projets</div>
-    <div className="btn" onClick={()=> navigate('/Contact')}>Contact</div>
-    <div className='btn' onClick={toggleLang}> {isFrench ? "Français" : "English"} </div>
+    <div className="btn" onClick={()=> navigate('/')}>{t.nav.home}</div>
+    <div className="btn" onClick={()=> navigate('/Skills')}>{t.nav.skills}</div>
+    <div className="btn" onClick={()=> navigate('/Projects')}>{t.nav.projects}</div>
+    <div className="btn" onClick={()=> navigate('/Contact')}>{t.nav.contact}</div>
+    <div className='btn' onClick={toggleLanguage}> {t.nav.language} </div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100% 60"

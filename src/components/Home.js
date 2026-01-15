@@ -3,19 +3,14 @@ import '../styles/home.css'
 import { useNavigate } from 'react-router-dom';
 import tom from '../assets/tom.jpeg';
 import { FaReact } from "react-icons/fa";
-import { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Home = () => {
   const navigate = useNavigate()
-
-  const text = "Ce site web a été réalisé en React";
-
-    const [isFrench, setIsFrench] = useState(true)
-  
-    
-      const toggleLang = () => {
-      setIsFrench(prev => !prev);
-    };
+  const { isFrench, toggleLanguage } = useLanguage();
+  const t = translations[isFrench ? 'fr' : 'en'];
+  const text = t.home.footer;
 
 
   return (
@@ -27,11 +22,11 @@ const Home = () => {
 
 <div class="nav">
   <div class="container">
-    <div className="btn" onClick={()=> navigate('/About')}>A propos</div>
-    <div className="btn" onClick={()=> navigate('/Skills')}>Compétences</div>
-    <div className="btn" onClick={()=> navigate('/Projects')}>Projets</div>
-    <div className="btn" onClick={()=> navigate('/Contact')}>Contact</div>
-    <div className='btn'onClick={toggleLang}> {isFrench ? "Français" : "English"} </div>
+    <div className="btn" onClick={()=> navigate('/About')}>{t.nav.about}</div>
+    <div className="btn" onClick={()=> navigate('/Skills')}>{t.nav.skills}</div>
+    <div className="btn" onClick={()=> navigate('/Projects')}>{t.nav.projects}</div>
+    <div className="btn" onClick={()=> navigate('/Contact')}>{t.nav.contact}</div>
+    <div className='btn'onClick={toggleLanguage}> {t.nav.language} </div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100% 60"
@@ -63,11 +58,8 @@ const Home = () => {
   <div className="img">
     <img src={tom} alt="Tom" className='img-content' />
   </div>
-  <span>En bref</span>
-  <p class="info">Je m'appelle Tom, je viens du monde de l'audiovisuel et je souhaite partager ma
-      technicité ainsi que mettre en pratique la formation et les connaissances
-      que j'ai pu acquérir lors de ma reconversion professionnelle comme développeur 
-      full stack web et mobile tout en me spécialisant en React et React Native. </p>
+  <span>{t.home.inBrief}</span>
+  <p class="info">{t.home.description}</p>
   <div class="share">
     <a href="https://github.com/Tom33270"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
@@ -90,8 +82,8 @@ const Home = () => {
 </a>
   </div >
    <div className='buttons'>
-    <button className='btn-details'>Mon CV</button>
-    <button className='btn-details'>Ma lettre de motivation </button>
+    <button className='btn-details'>{t.home.cv}</button>
+    <button className='btn-details'>{t.home.coverLetter}</button>
     </div>
 </div>
        
