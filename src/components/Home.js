@@ -3,11 +3,19 @@ import '../styles/home.css'
 import { useNavigate } from 'react-router-dom';
 import tom from '../assets/tom.jpeg';
 import { FaReact } from "react-icons/fa";
+import { useState } from 'react';
 
 const Home = () => {
   const navigate = useNavigate()
 
   const text = "Ce site web a été réalisé en React";
+
+    const [isFrench, setIsFrench] = useState(true)
+  
+    
+      const toggleLang = () => {
+      setIsFrench(prev => !prev);
+    };
 
 
   return (
@@ -23,7 +31,7 @@ const Home = () => {
     <div className="btn" onClick={()=> navigate('/Skills')}>Compétences</div>
     <div className="btn" onClick={()=> navigate('/Projects')}>Projets</div>
     <div className="btn" onClick={()=> navigate('/Contact')}>Contact</div>
-    <div className='btn'>🇫🇷</div>
+    <div className='btn'onClick={toggleLang}> {isFrench ? "Français" : "English"} </div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100% 60"

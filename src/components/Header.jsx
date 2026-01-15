@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import '../styles/header.css'
 import { useState } from "react";
 
+
 export default function Header() {
   const navigate = useNavigate();
   const [isFrench, setIsFrench] = useState(true)
@@ -25,7 +26,7 @@ export default function Header() {
     <div className="btn" onClick={()=> navigate('/Skills')}>Compétences</div>
     <div className="btn" onClick={()=> navigate('/Projects')}>Projets</div>
     <div className="btn" onClick={()=> navigate('/Contact')}>Contact</div>
-    <div className='btn' onClick={toggleLang}> {isFrench ? "🇫🇷" : "🇬🇧"}</div>
+    <div className='btn' onClick={toggleLang}> {isFrench ? "Français" : "English"} </div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100% 60"
