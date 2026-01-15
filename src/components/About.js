@@ -1,5 +1,5 @@
 
-import tom from '../assets/tom.jpeg';
+import tom from '../assets/tom pro.jpeg';
 import regie from '../assets/puy du fou.jpeg'
 import '../styles/about.css'
 import Header from "../components/Header";
@@ -33,7 +33,7 @@ const About = () => {
 
             <div className='main-content'>
 
-                <h1 className='title'>{t.about.title}</h1>
+               
 
 
                  <img src={tom} alt="Tom" className='img-main' />
@@ -73,7 +73,7 @@ const About = () => {
         <img src={firstImpressionLogo} alt="First Impression" />
       </div>
       <h3 className='company-name'>First Impression</h3>
-      <p className='company-role'>{t.about.role}</p>
+      <p className='company-role'>{t.about.role2}</p>
       <p className='company-description'>{t.about.descriptions.firstImpression}</p>
     </div>
 
@@ -82,7 +82,7 @@ const About = () => {
         <img src={puyDuFouLogo} alt="Puy du Fou" />
       </div>
       <h3 className='company-name'>Puy du Fou</h3>
-      <p className='company-role'>{t.about.role}</p>
+      <p className='company-role'>{t.about.role1}</p>
       <p className='company-description'>{t.about.descriptions.puyDuFou}</p>
     </div>
 
@@ -91,7 +91,7 @@ const About = () => {
         <img src={sanofiLogo} alt="Sanofi" />
       </div>
       <h3 className='company-name'>Sanofi</h3>
-      <p className='company-role'>{t.about.role}</p>
+      <p className='company-role'>{t.about.role1}</p>
       <p className='company-description'>{t.about.descriptions.sanofi}</p>
     </div>
 
@@ -100,7 +100,7 @@ const About = () => {
         <img src={allEventsLogo} alt="AllEvents" />
       </div>
       <h3 className='company-name'>AllEvents</h3>
-      <p className='company-role'>{t.about.role}</p>
+      <p className='company-role'>{t.about.role2}</p>
       <p className='company-description'>{t.about.descriptions.allEvents}</p>
     </div>
 
@@ -109,7 +109,7 @@ const About = () => {
         <img src={immersionLogo} alt="Immersion" />
       </div>
       <h3 className='company-name'>Immersion</h3>
-      <p className='company-role'>{t.about.role}</p>
+      <p className='company-role'>{t.about.role2}</p>
       <p className='company-description'>{t.about.descriptions.immersion}</p>
     </div>
 
@@ -118,7 +118,7 @@ const About = () => {
         <img src={parisSaclayLogo} alt="Communauté Paris-Saclay" />
       </div>
       <h3 className='company-name'>Communauté Paris-Saclay</h3>
-      <p className='company-role'>{t.about.role}</p>
+      <p className='company-role'>{t.about.role1}</p>
       <p className='company-description'>{t.about.descriptions.parisSaclay}</p>
     </div>
 

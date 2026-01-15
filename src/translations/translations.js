@@ -7,7 +7,8 @@ export const translations = {
       skills: "Compétences",
       projects: "Projets",
       contact: "Contact",
-      language: "Français"
+      language:`English` 
+
     },
 
     // Home Page
@@ -30,10 +31,11 @@ export const translations = {
       paragraph5: "Ce qui m'anime aujourd'hui, c'est la possibilité de transformer une idée en produit fonctionnel, utile et élégant. J'aime autant concevoir des interfaces intuitives que résoudre des problématiques backend complexes. Ma reconversion est née d'une envie profonde : créer, apprendre en continu et contribuer à des projets qui améliorent réellement l'expérience des utilisateurs. Sur ce site, vous découvrirez les différents projets auxquels j'ai participé pendant ma formation ainsi que mes réalisations en cours.",
       trustTitle: "Ils m'ont fait confiance",
       trustSubtitle: "Durant mon parcours de technicien audiovisuel, j'ai eu l'opportunité de collaborer avec diverses entreprises et institutions sur des projets d'envergure.",
-      role: "Technicien Audiovisuel",
+      role1: "Régisseur Audiovisuel",
+      role2:" Technicien Audiovisuel",
       freelance: "Freelance",
       descriptions: {
-        firstImpression: "LED walls, systèmes son",
+        firstImpression: "LED walls, maintenance, installation",
         puyDuFou: "Spectacles et événements",
         sanofi: "Événements corporate",
         allEvents: "Événementiel de luxe",
@@ -155,14 +157,14 @@ export const translations = {
       skills: "Skills",
       projects: "Projects",
       contact: "Contact",
-      language: "English"
+      language: "Français"
     },
 
     // Home Page
     home: {
       inBrief: "In Brief",
       description: "My name is Tom, I come from the audiovisual world and I want to share my technical skills and put into practice the training and knowledge I acquired during my professional retraining as a full stack web and mobile developer while specializing in React and React Native.",
-      cv: "My Resume",
+      cv: "My CV",
       coverLetter: "My Cover Letter",
       footer: "This website was built with React"
     },
@@ -178,10 +180,11 @@ export const translations = {
       paragraph5: "What drives me today is the possibility of transforming an idea into a functional, useful and elegant product. I enjoy designing intuitive interfaces as much as solving complex backend issues. My career change was born from a deep desire: to create, learn continuously and contribute to projects that genuinely improve user experience. On this site, you will discover the various projects I participated in during my training as well as my ongoing achievements.",
       trustTitle: "They trusted me",
       trustSubtitle: "During my career as an audiovisual technician, I had the opportunity to collaborate with various companies and institutions on large-scale projects.",
-      role: "Audiovisual Technician",
+      role1:"Audiovisual Technician",
+      role2: "Audiovisual Technician",
       freelance: "Freelance",
       descriptions: {
-        firstImpression: "LED walls, sound systems",
+        firstImpression: "LED walls, maintenance, installation",
         puyDuFou: "Shows and events",
         sanofi: "Corporate events",
         allEvents: "Luxury events",

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/home.css'
 import { useNavigate } from 'react-router-dom';
-import tom from '../assets/tom.jpeg';
+import tom from '../assets/tom pro.jpeg';
 import { FaReact } from "react-icons/fa";
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
@@ -26,7 +26,7 @@ const Home = () => {
     <div className="btn" onClick={()=> navigate('/Skills')}>{t.nav.skills}</div>
     <div className="btn" onClick={()=> navigate('/Projects')}>{t.nav.projects}</div>
     <div className="btn" onClick={()=> navigate('/Contact')}>{t.nav.contact}</div>
-    <div className='btn'onClick={toggleLanguage}> {t.nav.language} </div>
+    <div className='btn'onClick={toggleLanguage}> {t.nav.language}</div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100% 60"
