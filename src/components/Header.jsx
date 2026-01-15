@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import '../styles/header.css'
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
-import 'flag-icons/css/flag-icons.min.css';
+
 
 
 export default function Header() {
